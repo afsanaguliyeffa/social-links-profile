@@ -1,0 +1,149 @@
+:root {
+  /* Colors */
+  --green: #c4f82a;
+  --white: #ffffff;
+  --gray-900: #141414;
+  --gray-800: #1f1f1f;
+  --gray-700: #333333;
+
+  /* Spacing */
+  --spacing-500: 4rem;
+  --spacing-300: 2.4rem;
+  --spacing-200: 1.6rem;
+  --spacing-150: 1.2rem;
+  --spacing-100: 0.8rem;
+  --spacing-50: 0.4rem;
+}
+
+/* Inter Font */
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-VariableFont_slnt\,wght.ttf")
+    format("truetype");
+  font-weight: 400 600;
+  font-style: normal;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--gray-900);
+  font-size: 1.4rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-300);
+  font-family: "Inter", serif;
+  line-height: 1.5;
+}
+
+.profile-card {
+  background-color: var(--gray-800);
+  border-radius: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-300);
+  gap: var(--spacing-300);
+  position: relative;
+}
+
+.profile-img {
+  height: 8.8rem;
+  width: 8.8rem;
+  border-radius: 50%;
+}
+
+.profile-name {
+  font-size: 2.4rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--white);
+}
+
+.profile-address {
+  font-weight: 700;
+  text-align: center;
+  color: var(--green);
+}
+
+.profile-info {
+  font-weight: 400;
+  text-align: center;
+  color: var(--white);
+}
+
+.profile-links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--spacing-200);
+  font-weight: 700;
+}
+
+.profile-link {
+  display: flex;
+  background-color: var(--gray-700);
+  padding: var(--spacing-150);
+  text-decoration: none;
+  color: var(--white);
+  justify-content: center;
+  border-radius: 0.8rem;
+  transition: background-color 1s ease, color 1s ease;
+}
+
+.profile-link:hover {
+  cursor: pointer;
+  background-color: var(--green);
+  color: var(--gray-700);
+  transition: background-color 0.2s cubic-bezier(0.25, 1, 0.5, 1),
+    color 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.profile-card::before {
+  content: "";
+  display: block;
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top: 3px solid var(--green);
+  border-right: 3px solid var(--green);
+  border-top-right-radius: inherit;
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-card::after {
+  content: "";
+  display: block;
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-left: 3px solid var(--green);
+  border-bottom: 3px solid var(--green);
+  border-bottom-left-radius: inherit;
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-card:hover::before {
+  transform: translate(2rem, -2rem);
+}
+
+.profile-card:hover::after {
+  transform: translate(-2rem, 2rem);
+}
