@@ -22,7 +22,7 @@ A simple, responsive profile card showcasing basic user information and social m
 
 ### Links
 
-- Live Site URL: [Add live site URL here]
+- Live Site URL: [https://afsanaguliyeffa.github.io/social-links-profile/]
 
 ## My process
 
